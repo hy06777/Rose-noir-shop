@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose noir | 20·30 여성 패션</title>
+  <meta name="description" content="Rose noir — 20·30대 여성을 위한 아우터, 상의, 하의, 악세서리 패션 쇼핑몰">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 상단 헤더 -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Rose <em>noir</em></a>
+
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#shop" data-filter="전체">전체</a>
+        <a href="#shop" data-filter="아우터">아우터</a>
+        <a href="#shop" data-filter="상의">상의</a>
+        <a href="#shop" data-filter="하의">하의</a>
+        <a href="#shop" data-filter="악세서리">악세서리</a>
+        <a href="#membership">멤버십</a>
+      </nav>
+
+      <div class="header-tools">
+        <button type="button" class="icon-btn" id="userBtn" aria-label="로그인">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          <span class="user-label" id="userLabel">로그인</span>
+        </button>
+        <button type="button" class="icon-btn" id="cartBtn" aria-label="장바구니">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 메인 슬라이드: 4장, 6초마다 교차 -->
+    <section class="hero" id="hero" aria-label="메인 슬라이드">
+      <div class="slide is-active">
+        <img src="img/hero-1.svg" alt="블랙과 다크핑크 코트를 입은 두 모델">
+        <div class="slide-text container">
+          <p class="eyebrow">2026 WINTER OUTER</p>
+          <h1>Dressed in <i>Noir</i>,<br>Lit in Rose.</h1>
+          <p>도시의 밤을 닮은 블랙, 그 위에 피어나는 다크핑크 아우터.</p>
+          <a href="#shop" class="btn btn-pink" data-filter="아우터">아우터 보기</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/hero-2.svg" alt="선글라스와 진주 목걸이">
+        <div class="slide-text container">
+          <p class="eyebrow">ACCESSORY EDIT</p>
+          <h2>작은 디테일,<br><i>큰 존재감</i></h2>
+          <p>룩을 완성하는 마지막 한 끗, 악세서리.</p>
+          <a href="#shop" class="btn btn-pink" data-filter="악세서리">악세서리 보기</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/hero-3.svg" alt="핑크 니트와 블랙 스커트">
+        <div class="slide-text container">
+          <p class="eyebrow">DAILY TOP &amp; BOTTOM</p>
+          <h2>매일 입고 싶은<br><i>데일리 룩</i></h2>
+          <p>부드러운 니트와 플레어 스커트로 완성하는 출근룩.</p>
+          <a href="#shop" class="btn btn-pink" data-filter="상의">상의 보기</a>
+        </div>
+      </div>
+      <div class="slide is-light">
+        <img src="img/hero-4.svg" alt="블랙 핸드백과 골드 이어링">
+        <div class="slide-text container">
+          <p class="eyebrow">MEMBERSHIP</p>
+          <h2>가입만 해도<br><i>3,000P</i></h2>
+          <p>등급에 따라 결제 금액의 최대 7%를 포인트로 돌려드려요.</p>
+          <a href="#membership" class="btn btn-black">멤버십 혜택</a>
+        </div>
+      </div>
+
+      <div class="hero-ui container">
+        <span class="hero-num"><b id="heroNow">01</b> / 04</span>
+        <div class="hero-dots" id="heroDots"></div>
+        <button type="button" class="hero-arrow" id="heroPrev" aria-label="이전 슬라이드">&#8249;</button>
+        <button type="button" class="hero-arrow" id="heroNext" aria-label="다음 슬라이드">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- 혜택 안내 -->
+    <section class="benefits" aria-label="쇼핑 혜택">
+      <div class="container benefit-list">
+        <p><b>무료배송</b><span>50,000원 이상</span></p>
+        <p><b>가입 즉시 3,000P</b><span>첫 주문부터 사용</span></p>
+        <p><b>등급별 적립</b><span>1 · 3 · 5 · 7%</span></p>
+        <p><b>체험 결제</b><span>실제 결제 없음</span></p>
+      </div>
+    </section>
+
+    <!-- 분류 바로가기 -->
+    <section class="section" aria-labelledby="catTitle">
+      <div class="container">
+        <p class="kicker">CATEGORY</p>
+        <h2 class="title" id="catTitle">카테고리</h2>
+        <div class="cat-grid">
+          <a href="#shop" class="cat" data-filter="아우터"><img src="img/category-outer.svg" alt="아우터"><span>아우터</span></a>
+          <a href="#shop" class="cat" data-filter="상의"><img src="img/category-top.svg" alt="상의"><span>상의</span></a>
+          <a href="#shop" class="cat" data-filter="하의"><img src="img/category-bottom.svg" alt="하의"><span>하의</span></a>
+          <a href="#shop" class="cat" data-filter="악세서리"><img src="img/category-accessory.svg" alt="악세서리"><span>악세서리</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 상품 목록 -->
+    <section class="section section-shop" id="shop" aria-labelledby="shopTitle">
+      <div class="container">
+        <p class="kicker">SHOP</p>
+        <h2 class="title" id="shopTitle">이번 주 추천 상품</h2>
+
+        <div class="toolbar">
+          <div class="tabs" id="tabs" role="tablist" aria-label="분류 필터"></div>
+          <label class="search">
+            <span class="sr-only">상품 검색</span>
+            <input type="search" id="searchInput" placeholder="상품명 검색">
+          </label>
+          <select id="sortSelect" class="select" aria-label="정렬">
+            <option value="new">신상품순</option>
+            <option value="low">낮은 가격순</option>
+            <option value="high">높은 가격순</option>
+          </select>
+        </div>
+        <p class="result" id="resultText"></p>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- 멤버십 안내 -->
+    <section class="section membership" id="membership" aria-labelledby="memTitle">
+      <div class="container">
+        <p class="kicker">MEMBERSHIP</p>
+        <h2 class="title" id="memTitle">회원 등급 혜택</h2>
+        <p class="sub">누적 결제 금액에 따라 등급이 자동으로 올라가요. 1P = 1원으로 사용할 수 있어요.</p>
+        <div class="tiers" id="tierList"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 하단 정보 -->
+  <footer class="footer">
+    <div class="container">
+      <p class="logo">Rose <em>noir</em></p>
+      <p>20·30대 여성을 위한 패션 셀렉트숍 · 아우터 · 상의 · 하의 · 악세서리</p>
+      <p class="small">본 사이트는 「경영데이터베이스및실습」 수업용 프로젝트이며, 결제는 체험용으로 실제 결제가 이루어지지 않습니다.</p>
+      <p class="small">© 2026 Rose noir</p>
+    </div>
+  </footer>
+
+  <!-- ===== 팝업 영역 ===== -->
+  <div class="dim" id="dim"></div>
+
+  <!-- 로그인 · 회원가입 -->
+  <div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    <h3 id="authTitle">로그인</h3>
+    <div class="auth-tabs">
+      <button type="button" class="is-on" data-auth="login">로그인</button>
+      <button type="button" data-auth="join">회원가입</button>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <label>이메일<input type="email" id="loginEmail" autocomplete="email"></label>
+      <label>비밀번호<input type="password" id="loginPw" autocomplete="current-password"></label>
+      <p class="form-msg" id="loginMsg"></p>
+      <button type="submit" class="btn btn-pink btn-full">로그인</button>
+    </form>
+
+    <form id="joinForm" novalidate hidden>
+      <p class="notice">가입 즉시 <b>3,000P</b>를 드려요.</p>
+      <label>이름<input type="text" id="joinName" autocomplete="name"></label>
+      <label>이메일<input type="email" id="joinEmail" autocomplete="email"></label>
+      <label>휴대폰<input type="tel" id="joinPhone" placeholder="010-0000-0000" autocomplete="tel"></label>
+      <label>비밀번호 (영문+숫자 8자 이상)<input type="password" id="joinPw" autocomplete="new-password"></label>
+      <label>비밀번호 확인<input type="password" id="joinPw2" autocomplete="new-password"></label>
+      <label class="check"><input type="checkbox" id="joinAgree"> [필수] 이용약관 및 개인정보 수집에 동의합니다.</label>
+      <p class="form-msg" id="joinMsg"></p>
+      <button type="submit" class="btn btn-pink btn-full">가입하기</button>
+    </form>
+  </div>
+
+  <!-- 상품 상세 -->
+  <div class="modal modal-wide" id="detailModal" role="dialog" aria-modal="true" aria-label="상품 상세">
+    <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    <div id="detailBody"></div>
+  </div>
+
+  <!-- 장바구니 -->
+  <aside class="drawer" id="cartDrawer" aria-label="장바구니">
+    <div class="drawer-head">
+      <h3>장바구니</h3>
+      <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- 체험 결제 -->
+  <div class="modal modal-wide" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    <h3 id="coTitle">주문 · 체험 결제</h3>
+    <form id="checkoutForm" class="checkout" novalidate>
+      <div>
+        <h4>배송 정보</h4>
+        <label>받는 분<input type="text" id="coName"></label>
+        <label>연락처<input type="tel" id="coPhone" placeholder="010-0000-0000"></label>
+        <label>주소<input type="text" id="coAddr" placeholder="도로명 주소와 상세 주소"></label>
+
+        <h4>포인트 사용</h4>
+        <p class="point-have">보유 포인트 <b id="coHave">0P</b></p>
+        <div class="point-row">
+          <input type="number" id="coPoint" min="0" step="100" value="0" aria-label="사용할 포인트">
+          <button type="button" class="btn btn-black" id="coPointAll">전액 사용</button>
+        </div>
+        <p class="hint">100P 단위로 상품 금액까지 사용할 수 있어요.</p>
+
+        <h4>결제 수단 (체험)</h4>
+        <div class="pay-list" id="payList">
+          <label><input type="radio" name="pay" value="카드" checked> 카드</label>
+          <label><input type="radio" name="pay" value="계좌이체"> 계좌이체</label>
+          <label><input type="radio" name="pay" value="간편결제"> 간편결제</label>
+        </div>
+      </div>
+
+      <div class="summary">
+        <h4>주문 상품</h4>
+        <ul class="co-items" id="coItems"></ul>
+        <p class="row"><span>상품 금액</span><span id="coSub">0원</span></p>
+        <p class="row"><span>배송비</span><span id="coShip">0원</span></p>
+        <p class="row"><span>포인트 사용</span><span id="coUsed">-0원</span></p>
+        <p class="row total"><span>결제 금액</span><span id="coPay">0원</span></p>
+        <p class="earn"><span id="coGrade">BRONZE</span> 적립 예정 <b id="coEarn">0P</b></p>
+        <p class="form-msg" id="coMsg"></p>
+        <button type="submit" class="btn btn-pink btn-full" id="coSubmit">체험 결제하기</button>
+        <p class="hint">실제 결제는 이루어지지 않고 주문 내역만 저장돼요.</p>
+      </div>
+    </form>
+  </div>
+
+  <!-- 주문 완료 -->
+  <div class="modal" id="doneModal" role="dialog" aria-modal="true" aria-label="주문 완료">
+    <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    <div id="doneBody"></div>
+  </div>
+
+  <!-- 마이페이지 -->
+  <div class="modal modal-wide" id="myModal" role="dialog" aria-modal="true" aria-label="마이페이지">
+    <button type="button" class="close" data-close aria-label="닫기">&times;</button>
+    <div id="myBody"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
